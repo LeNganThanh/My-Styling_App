@@ -1,7 +1,53 @@
-import "./App.css";
+//import "./App.css";
 import React, { useState, useEffect } from "react";
 
+//declare all styles
+const containerStyle = {
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+};
+
+const h1Style = {
+  fontSize: "3rem",
+  color: "maroon",
+};
+
+const h2Style = {
+  color: "darkgreen",
+  fontStyle: "italic",
+};
+//
 function App() {
+  //setting for the button:hover
+  const [isHover, setIsHover] = useState(false);
+
+  const handleMouseOver = () => {
+    setIsHover(true);
+  };
+  const handleMouseLeave = () => {
+    setIsHover(false);
+  };
+  const buttonStyle = {
+    fontSize: "25px",
+    margin: "8rem 0 3rem",
+    padding: "15px 30px",
+    backgroundColor: isHover ? "darkcyan" : "yellow",
+    color: isHover ? "yellow" : "darkblue",
+    border: "none",
+    borderRadius: "10px",
+    cursor: "pointer",
+  };
+
+  //setting body background color
+  useEffect(() => {
+    document.body.style.backgroundColor = "salmon";
+    return () => {
+      document.body.style.backgroundColor = null;
+    };
+  }, []);
+
+  //old code
   const [show, setShow] = useState(true);
   const initialW = window.innerWidth;
   const initialH = window.innerHeight;
@@ -24,22 +70,28 @@ function App() {
   }, [windowSize]);
 
   const display = (
-    <div className="App">
-      <h1>Window resize </h1>
+    <div style={containerStyle}>
+      <h1 style={h1Style}>Window resize </h1>
       <br />
-      <h2>The window width is : {windowSize.windowW}px</h2>
-      <h2>The window height is : {windowSize.windowH}px</h2>
+      <h2 style={h2Style}>The window width is : {windowSize.windowW}px</h2>
+      <h2 style={{ color: "darkblue" }}>
+        The window height is : {windowSize.windowH}px
+      </h2>
     </div>
   );
 
   return (
-    <div className="App">
-      <button onClick={() => setShow(show => !show)}>
+    <div style={containerStyle}>
+      <button
+        onClick={() => setShow(show => !show)}
+        style={buttonStyle}
+        onMouseOver={handleMouseOver}
+        onMouseLeave={handleMouseLeave}
+      >
         Hide/Show Window Size
       </button>
       {show ? display : null}
     </div>
   );
 }
-
 export default App;
