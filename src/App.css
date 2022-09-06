@@ -3,11 +3,30 @@
   text-align: center;
   font-size: 1.5rem;
 }
+body {
+  background-image: url("./image/WZ02.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: fixed;
+}
 button {
-  font-size: 1.5rem;
+  margin: 10rem 0 3rem;
+  font-size: 2.5rem;
   padding: 15px 30px;
   background-color: darkcyan;
   color: bisque;
   border: none;
-  box-shadow: 0 0 10px yellow;
+  border-radius: 10px;
+  box-shadow: 5px 5px 20px darkgray;
+}
+button:hover {
+  background-color: rgba(127, 255, 212, 0.075);
+  color: brown;
+}
+h1 {
+  color: maroon;
+}
+h2 {
+  font-style: italic;
+  color: darkolivegreen;
 }
