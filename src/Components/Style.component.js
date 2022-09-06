@@ -7,28 +7,31 @@ export const Container = styled.div`
 `;
 
 export const H1Style = styled.h1`
-  color: red;
-  font-size: 3rem;
+  color: yellowgreen;
+  font-size: 4rem;
   font-style: italic;
 `;
 
 export const H2Style = styled.h2`
-  color: maroon;
+  color: limegreen;
   font-family: "Times New Roman", Times, serif;
-  font-size: 2rem;
+  font-size: 2.5rem;
 `;
 
 export const Button = styled.button`
+  opacity: 0.4;
   font-size: 3rem;
+  font-weight: bold;
   padding: 15px 30px;
-  background-color: magenta;
-  color: wheat;
-  margin: 8rem 0 3rem;
+  background-color: pink;
+  color: black;
+  margin: 10rem 0 3rem;
   cursor: pointer;
   border: none;
   border-radius: 10px;
   &:hover {
     background-color: green;
+    color: white;
   }
 `;
 
