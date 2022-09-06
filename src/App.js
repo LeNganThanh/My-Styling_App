@@ -31,7 +31,7 @@ function App() {
   };
   const buttonStyle = {
     fontSize: "2.5rem",
-    margin: "8rem 0 3rem",
+    margin: "10rem 0 3rem",
     padding: "15px 30px",
     backgroundColor: isHover ? "darkcyan" : "yellow",
     color: isHover ? "yellow" : "darkblue",
@@ -47,6 +47,7 @@ function App() {
     document.body.style.backgroundPosition = "center";
     document.body.style.backgroundRepeat = "no-repeat";
     document.body.style.backgroundSize = "cover";
+    document.body.style.backgroundAttachment = "fixed";
     return () => {
       document.body.style.backgroundImage = null;
     };
@@ -79,7 +80,7 @@ function App() {
       <h1 style={h1Style}>Window resize </h1>
       <br />
       <h2 style={h2Style}>The window width is : {windowSize.windowW}px</h2>
-      <h2 style={{ color: "darkblue" }}>
+      <h2 style={{ color: "darkblue", fontSize: "2rem" }}>
         The window height is : {windowSize.windowH}px
       </h2>
     </div>
