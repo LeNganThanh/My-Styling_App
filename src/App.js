@@ -9,13 +9,14 @@ const containerStyle = {
 };
 
 const h1Style = {
-  fontSize: "3rem",
+  fontSize: "3.5rem",
   color: "maroon",
 };
 
 const h2Style = {
   color: "darkgreen",
   fontStyle: "italic",
+  fontSize: "2rem",
 };
 //
 function App() {
@@ -29,7 +30,7 @@ function App() {
     setIsHover(false);
   };
   const buttonStyle = {
-    fontSize: "25px",
+    fontSize: "2.5rem",
     margin: "8rem 0 3rem",
     padding: "15px 30px",
     backgroundColor: isHover ? "darkcyan" : "yellow",
@@ -41,9 +42,13 @@ function App() {
 
   //setting body background color
   useEffect(() => {
-    document.body.style.backgroundColor = "salmon";
+    document.body.style.backgroundImage =
+      "url('https://source.unsplash.com/random')";
+    document.body.style.backgroundPosition = "center";
+    document.body.style.backgroundRepeat = "no-repeat";
+    document.body.style.backgroundSize = "cover";
     return () => {
-      document.body.style.backgroundColor = null;
+      document.body.style.backgroundImage = null;
     };
   }, []);
 
