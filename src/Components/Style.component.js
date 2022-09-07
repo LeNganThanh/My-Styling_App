@@ -13,9 +13,10 @@ export const H1Style = styled.h1`
 `;
 
 export const H2Style = styled.h2`
-  color: limegreen;
+  color: darkgreen;
   font-family: "Times New Roman", Times, serif;
   font-size: 2.5rem;
+  text-shadow: 1px 1px white;
 `;
 
 export const Button = styled.button`
