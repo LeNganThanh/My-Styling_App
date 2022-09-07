@@ -29,6 +29,7 @@ function App() {
   const handleMouseLeave = () => {
     setIsHover(false);
   };
+
   const buttonStyle = {
     fontSize: "2.5rem",
     margin: "10rem 0 3rem",
@@ -101,3 +102,12 @@ function App() {
   );
 }
 export default App;
+
+//changing bgc on Hover
+/* 
+function handleHover(e) => e.target.backgroundColor = "red"
+return(
+<button onMouseOver ={handleHover}>Click</button>
+
+)
+*/
